@@ -1,7 +1,60 @@
 <resources>
-   <string name="app_name">Tip Calculator</string>
-   <string name="enter_amount">Enter Amount</string>
-   <string name="tip_percentage">15%</string>
-   <string name="tip">Tip</string>
-   <string name="total">Total</string>
+    <string name="app_name">BMI</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="weight" />
+    <string name="height" />
+    <string name="age" />
+    <string name="gender" />
+    <string name="enter_weight" />
+    <string name="enter_height_cm" />
+    <string name="wiek" />
+    <string name="plec" />
+    <string name="txtView_BMR" />
+    <string name="gender_prompt" />
+    <string name="age_hint" />
+    <string name="weight_hint" />
+    <string name="height_hint" />
+    <string name="calculate_button" />
+    <string name="weight_label" />
+    <string name="height_label" />
+    <string name="age_label" />
+    <string name="gender_label" />
+
+    <string-array name="recipes">
+        <item>Przepis 1</item>
+        <item>Przepis 2</item>
+    </string-array>
+    <string-array name="list_of_recipes">
+        <item>Kanapka z awokado - ok.250 kcal</item>
+        <item>Koktajl owocowy - ok.150 kcal</item>
+        <item>Wrap z kurczakiem - ok.300 kcal</item>
+    </string-array>
+    <string-array name="dish_kcal">
+        <item>250 kcal</item>
+        <item>150 kcal</item>
+        <item>300 kcal</item>
+    </string-array>
+    <string name="skladniki">Składniki</string>
+    <string name="przygotowanie">Przygotowanie</string>
+
+    <string-array name="recipe_ingredients">
+        <item>1 kromka chleba razowego, 1/2 awokado, sok z cytryny, sól i pieprz do smaku</item>
+        <item>1 banan, 1 kiwi, garść truskawek, 1 łyżka miodu, 200ml mleka kokosowego</item>
+        <item>1 tortilla, 100g fileta z kurczaka, garść sałaty, 1 pomidor, 1/2 cebuli, sos tzatziki, sól i pieprz do smaku</item>
+    </string-array>
+    <string-array name="recipe_directions">
+    <item>    Rozgnieć awokado widelcem w misce i dodaj sok z cytryny, sól i pieprz do smaku.
+        Posmaruj kromkę chleba przygotowanym kremem z awokado.
+        Podawaj z pomidorem i ogórkiem.</item>
+    <item>    Pokrój banan, kiwi i truskawki w kostkę.
+        Wszystkie owoce wrzuć do blendera i dodaj mleko kokosowe oraz miód.
+        Wszystko razem zmiksuj na gładki koktajl.
+        Podawaj schłodzone.</item>
+
+    <item>    Filet z kurczaka ugotuj i pokrój w drobną kostkę.
+        Na tortilli połóż liście sałaty, pokrojony pomidor i cebulę oraz mięso z kurczaka.
+        Całość polij sosem tzatziki i posyp solą i pieprzem do smaku.
+        Zwiń tortillę w rolkę i podawaj na ciepło lub zimno.</item>
+
+    </string-array>
 </resources>
