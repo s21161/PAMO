@@ -22,11 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView harrisTextView;
     private Button recipesButton;
 
-
     private String[] recipes = {"Przepis 1", "Przepis 2"};
     private String[] recipeDescriptions = {"Opis przepisu 1", "Opis przepisu 2"};
     private String[] recipeIngredients = {"Składnik 1 przepisu 1, Składnik 2 przepisu 1", "Składnik 1 przepisu 2, Składnik 2 przepisu 2"};
     private Button bmiButton;
+    private Button quizButton;
+    private Button bmiChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bmiTextView = findViewById(R.id.bmiTextView);
         harrisTextView = findViewById(R.id.harrisTextView);
         recipesButton = findViewById(R.id.button_recipes);
+        quizButton = findViewById(R.id.button_quiz);
+        bmiChart = findViewById(R.id.button_chart);
 
+        bmiChart.setOnClickListener(this);
+        quizButton.setOnClickListener(this);
         recipesButton.setOnClickListener(this);
         bmiButton.setOnClickListener(this);
+
         heightEditText.addTextChangedListener(textWatcher);
         weightEditText.addTextChangedListener(textWatcher);
 
@@ -56,6 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_recipes:
                 startActivity(new Intent(this, Recipes.class));
+                break;
+            case R.id.button_quiz:
+                startActivity(new Intent(this, QuizActivity.class));
+                break;
+            case R.id.button_chart:
+                startActivity(new Intent(this, BmiChartActivity.class));
                 break;
         }}
 

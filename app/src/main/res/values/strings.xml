@@ -57,4 +57,20 @@
         Zwiń tortillę w rolkę i podawaj na ciepło lub zimno.</item>
 
     </string-array>
+
+
+
+
+        <!-- Tekst dla pytania -->
+        <string name="pytanie">Pytanie</string>
+
+        <!-- Teksty dla odpowiedzi -->
+        <string name="odpowiedz1">Odpowiedź 1</string>
+        <string name="odpowiedz2">Odpowiedź 2</string>
+        <string name="odpowiedz3">Odpowiedź 3</string>
+        <string name="odpowiedz4">Odpowiedź 4</string>
+
+        <!-- Tekst dla przycisku "Sprawdź" -->
+        <string name="sprawdz">Sprawdź</string>
+
 </resources>
