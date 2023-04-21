@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_array">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string-array name="pytania">
+        <item>Pytanie 1</item>
+        <item>Pytanie 2</item>
+        <item>Pytanie 3</item>
+        <!-- Dodaj kolejne pytania tutaj -->
+    </string-array>
+    <string-array name="poprawne_odpowiedzi">
+        <item>Poprawna odpowiedź 1</item>
+        <item>Poprawna odpowiedź 2</item>
+        <item>Poprawna odpowiedź 3</item>
+        <!-- Dodaj kolejne poprawne odpowiedzi tutaj, w odpowiedniej kolejności -->
+    </string-array>
+</resources>
