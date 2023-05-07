@@ -1,26 +1,40 @@
-package com.example.tipper;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.TextView;
-public class MyOnItemClickListener implements AdapterView.OnItemClickListener {
+package com.example.tipper
 
-    private String[] recipes;
-    private String[] recipeDescriptions;
-    private String[] recipeIngredients;
-    private TextView recommendedRecipeTextView;
+import com.example.tipper.Question
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import com.example.tipper.R
+import android.content.Intent
+import android.text.TextUtils
+import android.widget.ArrayAdapter
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.AdapterView
+import android.widget.RadioGroup
+import com.example.tipper.Quiz
+import android.widget.RadioButton
+import android.widget.AdapterView.OnItemSelectedListener
+import android.widget.EditText
+import android.widget.Spinner
+import android.text.TextWatcher
+import android.text.Editable
+import android.view.View
+import com.example.tipper.MainActivity
+import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.LineData
 
-    public MyOnItemClickListener(String[] recipes, String[] recipeDescriptions, String[] recipeIngredients, TextView recommendedRecipeTextView) {
-        this.recipes = recipes;
-        this.recipeDescriptions = recipeDescriptions;
-        this.recipeIngredients = recipeIngredients;
-        this.recommendedRecipeTextView = recommendedRecipeTextView;
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String recommendedRecipe = recipes[position];
-        String recommendedRecipeDescription = recipeDescriptions[position];
-        String recommendedRecipeIngredients = recipeIngredients[position];
-        recommendedRecipeTextView.setText("Recommended recipe: " + recommendedRecipe + "\n\n" + recommendedRecipeDescription + "\n\nIngredients: " + recommendedRecipeIngredients);
+class MyOnItemClickListener(
+    private val recipes: Array<String>,
+    private val recipeDescriptions: Array<String>,
+    private val recipeIngredients: Array<String>,
+    private val recommendedRecipeTextView: TextView
+) : OnItemClickListener {
+    override fun onItemClick(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
+        val recommendedRecipe = recipes[position]
+        val recommendedRecipeDescription = recipeDescriptions[position]
+        val recommendedRecipeIngredients = recipeIngredients[position]
+        recommendedRecipeTextView.text =
+            "Recommended recipe: $recommendedRecipe\n\n$recommendedRecipeDescription\n\nIngredients: $recommendedRecipeIngredients"
     }
 }

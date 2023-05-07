@@ -1,31 +1,42 @@
-package com.example.tipper;
+package com.example.tipper
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
+import com.example.tipper.Question
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import com.example.tipper.R
+import android.content.Intent
+import android.os.Handler
+import android.text.TextUtils
+import android.widget.ArrayAdapter
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.AdapterView
+import android.widget.RadioGroup
+import com.example.tipper.Quiz
+import android.widget.RadioButton
+import android.widget.AdapterView.OnItemSelectedListener
+import android.widget.EditText
+import android.widget.Spinner
+import android.text.TextWatcher
+import android.text.Editable
+import com.example.tipper.MainActivity
+import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.LineData
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class SplashActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-
+class SplashActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
 
 
         // Tworzy obiekt Handler, który opóźnia uruchomienie nowej aktywności
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Uruchom nową aktywność po zakończeniu czasu opóźnienia
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(i);
+        Handler().postDelayed({ // Uruchom nową aktywność po zakończeniu czasu opóźnienia
+            val i = Intent(this@SplashActivity, MainActivity::class.java)
+            startActivity(i)
 
-                // Zamknij obecną aktywność
-                finish();
-            }
-        }, 3000);
+            // Zamknij obecną aktywność
+            finish()
+        }, 3000)
     }
 }

@@ -1,51 +1,37 @@
-package com.example.tipper;
+package com.example.tipper
 
-import java.util.List;
+import com.example.tipper.Question
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import com.example.tipper.R
+import android.content.Intent
+import android.text.TextUtils
+import android.widget.ArrayAdapter
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.AdapterView
+import android.widget.RadioGroup
+import com.example.tipper.Quiz
+import android.widget.RadioButton
+import android.widget.AdapterView.OnItemSelectedListener
+import android.widget.EditText
+import android.widget.Spinner
+import android.text.TextWatcher
+import android.text.Editable
+import com.example.tipper.MainActivity
+import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.LineData
 
-public class Question {
-    private String questionText;
-    private String option1;
-    private String option2;
-    private String option3;
-    private String option4;
-    private int correctOption;
+class Question(
+    val questionText: String,
+    val option1: String,
+    val option2: String,
+    val option3: String,
+    val option4: String,
+    val correctOption: Int
+) {
 
-    public Question(String questionText, String option1, String option2, String option3, String option4, int correctOption) {
-        this.questionText = questionText;
-        this.option1 = option1;
-        this.option2 = option2;
-        this.option3 = option3;
-        this.option4 = option4;
-        this.correctOption = correctOption;
-    }
-
-    public String getQuestionText() {
-        return questionText;
-    }
-
-    public String getOption1() {
-        return option1;
-    }
-
-    public String getOption2() {
-        return option2;
-    }
-
-    public String getOption3() {
-        return option3;
-    }
-
-    public String getOption4() {
-        return option4;
-    }
-
-    public int getCorrectOption() {
-        return correctOption;
-    }
-
-    public String[] getOptions() {
-        return new String[]{option1, option2, option3, option4};
-    }
+    val options: Array<String?>
+        get() = arrayOf(option1, option2, option3, option4)
 }
-
-
